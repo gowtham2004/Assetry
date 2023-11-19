@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.wrapper{
+    width: 300px;
+    border: 1px solid black;
+    margin: 5px auto 0;
+}
+.select-btn, .options li{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+.select-btn{
+    height: 55px;
+    font-size: 16px;
+    
+    
+    justify-content: space-between;
+    padding: 0 15px;
+    border-radius: 7px;
+    background: #fff;
+
+}
+
+.select-btn i{
+    font-size: 27px;
+    transition: transform 0.3s linear;
+
+}
+.wrapper.active .select-btn i{
+    transform: rotate(-180deg);
+}
+.content{
+    display: none;
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 7px;
+    background: #fff;
+}
+
+.wrapper.active .content{
+    display: block;
+}
+.content .search{
+    position: relative;
+}
+.search i{
+    left: 15px;
+    color: #999;
+    font-size: 17px;
+    line-height: 53px;
+    position: absolute;
+}
+.search input{
+    height: 53px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    padding: 0 15px 0 43px;
+    border: 1px solid #b3b3b3;
+    font-size: 17px;
+}
+.content .options{
+    margin-top: 10px;
+    max-height:250px;
+    overflow-y: auto;
+    padding: right 7px;
+}
+.options::-webkit-scrollbar{
+    width: 7px;
+}
+.options::-webkit-scrollbar-track{
+    background: #f1f1f1;
+    border-radius: 25px;
+}
+.options::-webkit-scrollbar-thumb{
+    background: #ccc;
+    border-radius: 25px;
+}
+
+.options li{
+    height: 50px;
+    padding: 0 13px;
+    font-size: 16px;
+    border-radius: 5px;
+    
+}
+
+.options li:hover{
+    background: #f2f2f2;
+}
